@@ -1,3 +1,8 @@
+// js for registering users and tradies would normally live in
+// a controller file however we were able to make it work here just before
+// the deadline and didn't want to risk breaking the app by moving stuff
+// around
+
 var express = require('express');
 var router = express.Router();
 var ctrlOthers = require('../controllers/others');

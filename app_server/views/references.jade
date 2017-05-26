@@ -36,11 +36,22 @@ block content
 					
 				h1 Architecture and design choices
 				p
-					| Our page uses the MVC architecture.
-					| 
+					| Our page uses the MVC architecture. To further separate concerns, the app is divided
+					| into app_api and app_server. The MEAN stack is used, and mongoose schemas are
+					| used to help control the documents in the Mongo database.
 				p
 					| We made a decision not to use Angular, as it would require a considerable amount
 					| of refactoring of our existing code.
+				p
+					| To better mirror a real-life app, we decided to have separate sign-ups for users 
+					| and tradies. The information they are required to enter is different, and
+					| the roles and axis that the interact on also differs, so although this complicates
+					| the app, we felt it was the superior choice.
+				p
+					| As we were unable to finish parts of our page, we have provided links to all
+					| of the sub-pages in the bar near the top of each page, in order to facilitate
+					| marking of this project. Ideally, certain pages would only be available to users 
+					| and certain pages would only be available to tradies.
 				
 				
 				h1 Difficulties faced

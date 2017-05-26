@@ -1,6 +1,6 @@
 To view this project:
 
-1. Navigate to the following URL [INSERT URL HERE]
+1. Navigate to the following URL https://tasmaster.herokuapp.com/
 
 To launch this project:
 
