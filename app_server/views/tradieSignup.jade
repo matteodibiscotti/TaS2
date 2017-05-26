@@ -1,0 +1,82 @@
+extends layout
+
+
+script(src="/javascripts/checkPasswords.js")
+
+block content
+  #banner.page-header
+    .container
+      h2 Please enter your details below to register as a Tradesman
+      form.form-horizontal(action='/tradereg', method='post', style='padding-top: 10px;')
+        fieldset
+          legend Business Information
+          .form-group
+            label.control-label.col-sm-2(for='businessName') Business Name:
+            .col-sm-10
+              input#email.form-control(type='text', placeholder='Enter the name of which your business is registered under', name='username')
+          .form-group
+            label.control-label.col-sm-2(for='abn') ABN:
+            .col-sm-10
+              input#email.form-control(type='number', placeholder='Enter your Australian Business Number', name='abn')
+        fieldset
+          legend Business Address
+          .form-group
+            label.control-label.col-sm-2(for='unitNumber') Unit Number:
+            .col-sm-10
+              input#email.form-control(type='text', placeholder='e.g 1 or b', name='unitNumber')
+          .form-group
+            label.control-label.col-sm-2(for='streetNumber') Street Number:
+            .col-sm-10
+              input#email.form-control(type='text', placeholder='e.g. 2', name='streetNumber')
+          .form-group
+            label.control-label.col-sm-2(for='streetName') Street Name:
+            .col-sm-10
+              input#email.form-control(type='text', placeholder='e.g. Central Ave', name='streetName')
+          .form-group
+            label.control-label.col-sm-2(for='postcode') Postcode:
+            .col-sm-10
+              input#email.form-control(type='number', placeholder='e.g. 6062', name='postcode')
+        fieldset
+          legend Registration Details
+          .form-group
+            label.control-label.col-sm-2(for='email') Email:
+            .col-sm-10
+              input#email.form-control(type='email', placeholder='Enter email', name='email')
+          .form-group
+            label.control-label.col-sm-2(for='password') Choose a password:
+            .col-sm-10
+              input#pwd.form-control(type='password', placeholder='Enter password', name='password')
+        fieldset
+          legend Check the trades which you will offer services for
+          .form-group(for='services')
+            .col-sm-offset-2.col-sm-10
+              label.checkbox-inline
+                input(type='checkbox', value='')
+                | Plumbing
+              label.checkbox-inline
+                input(type='checkbox', value='')
+                | Electrical
+              label.checkbox-inline
+                input(type='checkbox', value='')
+                | Carpentry
+          .form-group
+            .col-sm-offset-2.col-sm-10
+              label.checkbox-inline
+                input(type='checkbox', value='')
+                | AC/Refrigeration
+              label.checkbox-inline
+                input(type='checkbox', value='')
+                | Gardening/Landscaping
+              label.checkbox-inline
+                input(type='checkbox', value='')
+                | General Labour
+        fieldset
+          legend Enter the distance you are willing to travel to work
+          .form-group
+            label.control-label.col-sm-2(for='distance') Choose your maximum travel distance in kilometres
+              .col-sm-20
+                input#pwd.form-control(type='number', name='distance', min='0')
+              
+        .form-group
+          .col-sm-offset-2.col-sm-10
+            button.btn.btn-default(type='submit') Submit

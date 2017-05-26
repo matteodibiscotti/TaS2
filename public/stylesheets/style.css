@@ -1,0 +1,30 @@
+body {
+  padding-top: 70px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+/*@media (max-width: 979px) {
+	body {
+		padding-top: 0px;
+	}
+}*/
+
+a {
+  color: #00B7FF;
+}
+
+.login.btn-space-hor {
+    margin-right: 5px;
+}
+
+.login.btn-space-vert {
+	margin-top: 5px;
+}
+
+.login.form-font {
+	font-size: 15px;
+}
+
+.login.form-btn-space {
+	margin-right: 25px;
+}

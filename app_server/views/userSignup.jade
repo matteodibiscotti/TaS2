@@ -1,0 +1,44 @@
+extends layout
+
+script(source="../../public/javascripts/checkUser.js")
+
+block content
+  #banner.page-header
+    .container
+      h2 Please enter your details below to register as a user
+      form.form-horizontal(action='/register', method='post', style='padding-top: 10px;')
+        fieldset
+          legend Registration Details
+          .form-group
+            label.control-label.col-sm-2(for='username') Choose a User Name:
+            .col-sm-10
+              input#email.form-control(type='text', onblur="validateUserName()")
+          .form-group
+            label.control-label.col-sm-2(for='email') Email:
+            .col-sm-10
+              input#email.form-control(type='email', placeholder='Enter email', name='email', onblur="validateEmail()")
+          .form-group
+            label.control-label.col-sm-2(for='password') Choose a password:
+            .col-sm-10
+              input#pwd.form-control(type='password', placeholder='Enter password', name='password')
+        fieldset
+          legend Your Address
+          .form-group
+            label.control-label.col-sm-2(for='unitNumber') Unit Number:
+            .col-sm-10
+              input#email.form-control(type='text', placeholder='e.g 1 or b', name='unitNumber')
+          .form-group
+            label.control-label.col-sm-2(for='streetNumber') Street Number:
+            .col-sm-10
+              input#email.form-control(type='text', placeholder='e.g. 2', name='streetNumber')
+          .form-group
+            label.control-label.col-sm-2(for='streetName') Street Name:
+            .col-sm-10
+              input#email.form-control(type='text', placeholder='e.g. Central Ave', name='streetName')
+          .form-group
+            label.control-label.col-sm-2(for='postcode') Postcode:
+            .col-sm-10
+              input#email.form-control(type='text', placeholder='e.g. 6062', name='postcode')
+        .form-group
+          .col-sm-offset-2.col-sm-10
+            button.btn.btn-default(type='submit', onClick="validatePassword()") Submit

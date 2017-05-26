@@ -1,0 +1,40 @@
+doctype html
+html
+  head
+    meta(name='viewport', content='width=device-width, initial scale=1.0')
+    title= title
+    link(rel='stylesheet', href='/bootstrap/css/solar.bootstrap.css')
+    link(rel='stylesheet', href='/stylesheets/style.css')
+  body
+    if (error && error.length > 0)
+      br
+      h4.error-msg= error
+      br
+    .navbar.navbar-default.navbar-fixed-top
+      .container
+        .navbar-header
+          a.navbar-brand(href='/') Trades and Services
+          button.navbar-toggle(type='button', data-toggle='collapse', data-target='#navbar-main')
+              span.icon-bar
+              span.icon-bar
+              span.icon-bar
+          #navbar-main.navbar-collapse.collapse
+            ul.nav.navbar-nav
+              li: a(href='/welcome') About our site 
+              li: a(href='/ref') References
+              li: a(href='/') Login
+    .container
+      block content
+
+      
+      footer
+        .row
+          .col-xs-12
+            footer(id='footerContent')
+            small &copy; 2017 CITS5505 Agile Web Development Assignment
+            
+    script(src='/javascripts/jquery-3.2.1.min.js')
+    script(src='/javascripts/Footer.js')
+    script(src='/bootstrap/js/bootstrap.min.js')
+      
+  

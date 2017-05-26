@@ -1,0 +1,55 @@
+extends layout
+
+block content
+  #banner.page-header
+    .row     
+      .col-md-6.col-sm-12
+        h1 Log in as a tradie
+          form#LoginTradie
+       .form-inline
+         .form-group
+           span.label User Name:
+           input(type="text", id="username")
+         .form-group
+           span.label Password:
+           input(type="text", id="pw")
+         .btn.btn-default Submit
+
+//-        form#LoginClient
+          table
+            tr
+              td
+                label
+                  | User Name:
+                  td
+                    input#user(type='text', title='User name', required='')
+            tr
+              td
+                label
+                  | Password:
+                  td
+                    input#password(type='password', title='Password', required='')
+            tr
+              td
+                input(type='submit', name='login', value='Login', title='Login to this site!')
+    
+    
+    
+//-    .col-md-6.col-sm-12
+      h1 Log in as a tradie
+        form#LoginTradie
+          tr
+            td
+              label
+                | User Name:
+                td
+                  input#user(type='text', title='User name', required='')
+          tr
+            td
+              label
+                | Password:
+                td
+                  input#password(type='password', title='Password', required='')
+          tr
+            td
+              input(type='submit', name='login', value='Login', title='Login to this site!')

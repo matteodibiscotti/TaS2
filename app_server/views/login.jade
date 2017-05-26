@@ -1,0 +1,26 @@
+extends layout
+
+block content
+  #banner.page-header
+    .row     
+        h1.text-center Welcome to Trades and Services
+    .row
+      .col.text-center
+        .btn-group.btn-group-justified
+          a.btn.btn-default.btn-lg(href="/tradie/signup/new") Sign Up: Tradesman
+          a.btn.btn-default.btn-lg(href="/user/signup/new") Sign Up: User
+    .row
+      h2.text-center Already a Member?
+    .row
+      .col.text-center
+        form.form-inline(role='form', action='/login', method='post')
+          .form-group
+            span.label.login.form-font User Name:
+            input.form-control.input-lg(type="text", name="username")
+          .form-group
+            span.label.login.form-font Password:
+            input.form-control.input-lg.login.form-btn-space(type="password", name="password")
+          //&nbsp;
+          a(href='/index')
+            button.btn.btn-default.btn-lg(type="submit") Submit
+          

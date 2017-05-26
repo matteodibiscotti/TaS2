@@ -1,0 +1,87 @@
+extends layout
+
+block content
+  #banner.page-header
+    .container
+      .row
+        h1 make so can see current info here
+      .row(style='padding-top: 10px;')
+        .col-md-4.col-sm-12
+          p This has your personal information as a tradie. Any updates you make will be implemented immediately.
+          p These updates will affect the results of your search queries, and what will be displayed on your public profile.
+
+        .col-md-8.col-sm-12
+          form.form-horizontal(action='/action_page.php', validate)
+            fieldset
+              legend Business Information
+              .form-group
+                label.control-label.col-sm-2(for='businessname') Business Name
+                .col-sm-10
+                  input#email.form-control(type='text', name='Business name', placeholder='Enter Your New Business Name', require)
+              .form-group
+                label.control-label.col-sm-2(for='abn') ABN
+                .col-sm-10
+                  input#email.form-control(type='text', name='abn', placeholder='Enter Your New Australian Business Number', require)
+            fieldset
+              legend Contact and Login        
+              .form-group
+                label.control-label.col-sm-2(for='email') Email
+                .col-sm-10
+                  input#email.form-control(type='email', name='e-mail', placeholder='Enter Your New Email Address', require)         
+              .form-group
+                label.control-label.col-sm-2(for='password') Password
+                .col-sm-10
+                  input#email.form-control(type='password', name='password', placeholder='Enter Your Current Password', require)
+              .form-group
+                label.control-label.col-sm-2(for='password') New Password
+                .col-sm-10
+                  input#email.form-control(type='password', name='newPassword', placeholder='Enter Your New Password', require)       
+              .form-group
+                label.control-label.col-sm-2(for='confirmPassword') Confirm New Password
+                .col-sm-10
+                  input#email.form-control(type='password', name='confirmNewPassword', placeholder='Re-enter Your New Password', require)
+            fieldset
+              legend Business Address
+              .form-group
+                label.control-label.col-sm-2(for='unitNumber') Unit Number:
+                .col-sm-10
+                  input#email.form-control(type='text', name='unitNumber')
+              .form-group
+                label.control-label.col-sm-2(for='streetNumber') Street Number:
+                .col-sm-10
+                  input#email.form-control(type='text', name='streetNumber')
+              .form-group
+                label.control-label.col-sm-2(for='streetName') Street Name:
+                .col-sm-10
+                  input#email.form-control(type='text', name='streetName')
+              .form-group
+                label.control-label.col-sm-2(for='postcode') Postcode:
+                .col-sm-10
+                  input#email.form-control(type='text', name='postcode')
+            fieldset
+              legend Business Operation
+              .form-group
+                label.control-label.col-sm-2(for='distance') Working Distance
+                .col-sm-10
+                  input#email.form-control(type='numeric', min='0', name='distance', placeholder='In Kilometers', require)
+              .form-group
+                label.control-label.col-sm-2(for='trade') Expertise
+                .col-sm-10
+                  select#email.form-control(required='true')
+                    option(selected disabled) Select your trade
+                    option(value='Plumber') Plumber
+                    option(value='Electrician') Electrician
+                    option(value='Carpenter') Carpenter
+                    option(value='AC/Refrigeration') AC/Refrigeration
+                    option(value='Gardening/Landscaping') Gardening/Landscaping
+                    option(value='Labourer') Labourer
+    
+           
+          
+            .form-group
+              .col-sm-12
+                input#email.form-control(type='submit', value='Submit')
+
+
+    
+            script(src='/javascripts/DynamicForm.js')      
