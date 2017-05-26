@@ -1,3 +1,5 @@
+//preliminary javascript tests, to check that the testing framework works
+
 var assert = require('assert');
 
 var email1 = "testnotemail.com";
