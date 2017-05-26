@@ -3,35 +3,35 @@ module.exports.searchResults = function(req, res){
     res.render('searchResults', {
         title: 'Search Results',
         pageHeader: {
-            title: 'Loc8r',
-            strapline: 'Find places to work with wifi near you!'
+            title: 'Trades and Services',
+            strapline: 'Find local skilled tradies'
         },
-        sidebar: "Looking for wifi and a seat? Loc8r helps you find places to work when out and about. Perhaps with coffee, cake or a pint? Let Loc8r help you find the place you're looking for.",
+        sidebar: "Support local business, get superior service",
         locations: [{
-            name: 'Starcups',
-            address: '125 High Street, Reading, RG6 1PS',
+            name: 'Matt\'s Gardening,',
+            address: '1 Grassy Ln, Perth 6000',
             rating: 3,
-            facilities: ['Hot drinks', 'Food', 'Premium wifi'],
+            services: ['Mowing', 'Tree Removal'],
             distance: '100m'
         }, {
-            name: 'Cafe Hero',
-            address: '125 High Street, Reading, RG6 1PS',
+            name: 'Kit\'s Refridgeration',
+            address: '2 Grassy Ln, Perth 6000',
             rating: 4,
-            facilities: ['Hot drinks', 'Food', 'Premium wifi'],
+            services: ['AC', 'Ducting'],
             distance: '200m'
         }, {
-            name: 'Burger Queen',
-            address: '125 High Street, Reading, RG6 1PS',
+            name: 'Power Plumbing',
+            address: '3 Grassy Ln, Perth 6000',
             rating: 2,
-            facilities: ['Food', 'Premium wifi'],
+            services: ['Faucet Leak', 'Gas Appliance Install'],
             distance: '250m'
         }]
     });
 };
 
-module.exports.searchResults = function(req, res){
+/*module.exports.searchResults = function(req, res){
 res.render('searchResults', { title: 'Search Results' });
-};
+};*/
 
 /* GET search form page */
 module.exports.newSearch = function(req, res){

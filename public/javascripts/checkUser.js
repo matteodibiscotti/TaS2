@@ -33,7 +33,7 @@ function validatePostcode() {
 }
 
 function validatePassword() {
-  var inPassword = document.getElementById("password");
+  var inPassword = document.getElementById("pwd");
 
   }
   else if (inPassword.value.length < 8) {

@@ -9,6 +9,7 @@ var tradesmanSchema = new mongoose.Schema({
   postcode: {type: Number, required: true},
   //coords: {type: [Number], index: '2dsphere'}, //longitude, then latitude
   email: {type: String, required: true},
+  distance: {type: Number, required: true},
 
 });
 module.exports = mongoose.model('tradesman', tradesmanSchema, 'tradesman');

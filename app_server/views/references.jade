@@ -14,6 +14,25 @@ block content
 					| We have built this site from the ground up, using the express and bootstrap templates.  If you wish to contact us
 					| in regards to the content or design of the website, please email me us at 10420746@student.uwa.edu.au (Kit)
 					| or 21944708@student.uwa.edu.au (Matthew).
+				
+				h1 Our matching algorithm
+				p
+					| Our matching algorithm is based around the following parameters:
+					| There must be a job registered, the tradie must have the skill to do the job
+					| and the distance of the job must be within the tradie's maximum distance that
+					| they are willing to travel. If this is the case, then each job will be 
+					| output in a different colour, depending on the quality of the match.
+					| The quality is determined by the formula 100 - ((50 * job distance)/ tradie's maximum distance),
+					| meaning that all scores will be between 50 and 100%.
+					| If a job has a score of >=80%, it will be printed in blue, if the score is >= 60, it will be printed in yellow,
+					| and a score of < 60 will be printed in red.
+				p
+					| As we were unable to get geographical matching, via Google Maps working in time
+					| for our submission of this project, we were unable to properly implement this
+					| matching algorithm. However, the code for it has been included, and demonstrates
+					| our intentions for how the system should work. The code for it is in
+					| public/javascripts/matchingAlgorithm.js
+				
 					
 				h1 Architecture and design choices
 				p

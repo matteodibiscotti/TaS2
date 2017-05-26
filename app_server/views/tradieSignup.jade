@@ -1,7 +1,7 @@
 extends layout
 
 
-script(src="/javascripts/checkPasswords.js")
+script(src="../../javascripts/checkTradie.js")
 
 block content
   #banner.page-header
@@ -13,29 +13,29 @@ block content
           .form-group
             label.control-label.col-sm-2(for='businessName') Business Name:
             .col-sm-10
-              input#email.form-control(type='text', placeholder='Enter the name of which your business is registered under', name='username')
+              input#businessName.form-control(type='text', placeholder='Enter the name of which your business is registered under', name='username')
           .form-group
             label.control-label.col-sm-2(for='abn') ABN:
             .col-sm-10
-              input#email.form-control(type='number', placeholder='Enter your Australian Business Number', name='abn')
+              input#ABN.form-control(type='number', placeholder='Enter your Australian Business Number', name='abn', onblur="validateABN()")
         fieldset
           legend Business Address
           .form-group
             label.control-label.col-sm-2(for='unitNumber') Unit Number:
             .col-sm-10
-              input#email.form-control(type='text', placeholder='e.g 1 or b', name='unitNumber')
+              input#unitNumber.form-control(type='text', placeholder='e.g 1 or b', name='unitNumber')
           .form-group
             label.control-label.col-sm-2(for='streetNumber') Street Number:
             .col-sm-10
-              input#email.form-control(type='text', placeholder='e.g. 2', name='streetNumber')
+              input#streetNumber.form-control(type='text', placeholder='e.g. 2', name='streetNumber')
           .form-group
             label.control-label.col-sm-2(for='streetName') Street Name:
             .col-sm-10
-              input#email.form-control(type='text', placeholder='e.g. Central Ave', name='streetName')
+              input#streetName.form-control(type='text', placeholder='e.g. Central Ave', name='streetName')
           .form-group
             label.control-label.col-sm-2(for='postcode') Postcode:
             .col-sm-10
-              input#email.form-control(type='number', placeholder='e.g. 6062', name='postcode')
+              input#postcode.form-control(type='number', placeholder='e.g. 6062', name='postcode')
         fieldset
           legend Registration Details
           .form-group
@@ -75,8 +75,8 @@ block content
           .form-group
             label.control-label.col-sm-2(for='distance') Choose your maximum travel distance in kilometres
               .col-sm-20
-                input#pwd.form-control(type='number', name='distance', min='0')
+                input#distance.form-control(type='number', name='distance', min='0')
               
         .form-group
           .col-sm-offset-2.col-sm-10
-            button.btn.btn-default(type='submit') Submit
+            button.btn.btn-default(type='submit', onClick="validatePassword()") Submit

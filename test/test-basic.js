@@ -1,12 +1,14 @@
 var assert = require('assert');
 
+var email1 = "testnotemail.com";
+var email2 = "test@email.com";
 
 describe('Basic-tests', function(){
-  it('test 1 + 1 = 2', function() {
-    assert.equal(1+1, 2, '1+1 should equal 2');
+  it('Test for non e-mail address', function() {
+    assert.equal(email1.indexOf('@'), -1, '@ not found');
   });
-  it('test 1 + 1 != 3', function(){
-    assert.notEqual(1+1, 3, '1+1 is not equal to 3');
+  it('Test for e-mail address', function(){
+    assert.equal(email2.indexOf('@'), 4, '@ found');
   });
   afterEach(function(){
     //nothing to clean up at the moment

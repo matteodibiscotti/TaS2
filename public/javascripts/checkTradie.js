@@ -8,6 +8,14 @@ function validateEmail() {
   }
 }
 
+function validateABN() {
+  var abn = document.getElementById("ABN");
+  if (abn.value.search(/[0-9]{9}/) == -1) {
+    window.alert("An ABN must contain 9 characters, all of which are numbers");
+    return false;
+  }
+}
+
 function validatePostcode() {
   var inPostcode = document.getElementById("postcode");
 
@@ -25,7 +33,7 @@ function validatePostcode() {
 }
 
 function validatePassword() {
-  var inPassword = document.getElementById("password");
+  var inPassword = document.getElementById("pwd");
 
   }
   else if (inPassword.value.length < 8) {

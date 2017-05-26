@@ -12,7 +12,7 @@ block content
           .form-group
             label.control-label.col-sm-2(for='username') Choose a User Name:
             .col-sm-10
-              input#email.form-control(type='text', onblur="validateUserName()")
+              input#username.form-control(type='text', onblur="validateUserName()")
           .form-group
             label.control-label.col-sm-2(for='email') Email:
             .col-sm-10
@@ -26,19 +26,19 @@ block content
           .form-group
             label.control-label.col-sm-2(for='unitNumber') Unit Number:
             .col-sm-10
-              input#email.form-control(type='text', placeholder='e.g 1 or b', name='unitNumber')
+              input#unitNumber.form-control(type='text', placeholder='e.g 1 or b', name='unitNumber')
           .form-group
             label.control-label.col-sm-2(for='streetNumber') Street Number:
             .col-sm-10
-              input#email.form-control(type='text', placeholder='e.g. 2', name='streetNumber')
+              input#streetNumber.form-control(type='text', placeholder='e.g. 2', name='streetNumber')
           .form-group
             label.control-label.col-sm-2(for='streetName') Street Name:
             .col-sm-10
-              input#email.form-control(type='text', placeholder='e.g. Central Ave', name='streetName')
+              input#streetName.form-control(type='text', placeholder='e.g. Central Ave', name='streetName')
           .form-group
             label.control-label.col-sm-2(for='postcode') Postcode:
             .col-sm-10
-              input#email.form-control(type='text', placeholder='e.g. 6062', name='postcode')
+              input#postcode.form-control(type='text', placeholder='e.g. 6062', name='postcode')
         .form-group
           .col-sm-offset-2.col-sm-10
             button.btn.btn-default(type='submit', onClick="validatePassword()") Submit

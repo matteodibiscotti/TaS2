@@ -16,7 +16,7 @@ block content
             .panel-heading
               h2.panel-title Opening hours
             .panel-body
-              each time in location.openingTimes
+              each time in location.availability
                 p
                   | #{time.days} : 
                   if time.closed
@@ -25,9 +25,9 @@ block content
                     | #{time.opening} - #{time.closing}
           .panel.panel-primary
             .panel-heading
-              h2.panel-title Facilities
+              h2.panel-title Services
             .panel-body
-              each facility in location.facilities
+              each facility in location.Services
                 span.label.label-warning
                   span.glyphicon.glyphicon-ok
                   | &nbsp;#{facility}

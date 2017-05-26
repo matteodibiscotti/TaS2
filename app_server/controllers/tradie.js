@@ -33,45 +33,45 @@ module.exports.profilePublic = function(req, res) {
     res.render('profilePublic', {
         title: 'Public Profile',
         pageHeader: {
-            title: 'Starcups'
+            title: 'Matt\'s Gardening'
         },
         sidebar: {
-            context: 'is on Loc8r because it has accessible wifi and space to sit down with your laptop and get some work done.',
-            callToAction: 'If you\'ve been and you like it - or if you don\'t - please leave a review to help other people just like you.'
+            context: 'Provides high quality mowing and tree removal services',
+            callToAction: 'don\'t take our word for it!  check our reviews!',
         },
         location: {
-            name: 'Starcups',
-            address: '125 High Street, Reading, RG6 1PS',
-            rating: 3,
-            facilities: ['Hot drinks', 'Food', 'Premium wifi'],
+            name: 'Matt\'s Gardening',
+            address: '1, Grassy Ln, Perth 6000',
+            rating: 5,
+            Services: ['Mowing', 'Tree Removal'],
             coords: {
                 lat: 51.455041,
                 lng: -0.9690884
             },
-            openingTimes: [{
+            availability: [{
                 days: 'Monday - Friday',
                 opening: '7:00am',
-                closing: '7:00pm',
+                closing: '4:00pm',
                 closed: false
             }, {
                 days: 'Saturday',
                 opening: '8:00am',
                 closing: '5:00pm',
-                closed: false
+                closed: true
             }, {
                 days: 'Sunday',
                 closed: true
             }],
             reviews: [{
-                author: 'Simon Holmes',
-                rating: 5,
-                timestamp: '16 July 2013',
-                reviewText: 'What a great place. I can\'t say enough good things about it.'
+                author: 'Matt ',
+                rating: 1,
+                timestamp: '5 May 2017',
+                reviewText: 'Terrible.. May as well have just done burnouts on my lawn.'
             }, {
-                author: 'Charlie Chaplin',
-                rating: 3,
-                timestamp: '16 June 2013',
-                reviewText: 'It was okay. Coffee wasn\'t great, but the wifi was fast.'
+                author: 'Kit ',
+                rating: 5,
+                timestamp: '20 May 2017',
+                reviewText: 'Did a great job and even tidied the rest of the garden as well for no additional cost!'
             }]
         }
     });

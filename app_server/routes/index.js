@@ -54,7 +54,8 @@ router.post('/tradereg', function(req, res, next) {
           streetNumber: req.body.streetNumber,
           streetName: req.body.streetName,
           postcode: req.body.postcode,
-          email: req.body.email
+          email: req.body.email,
+          distance: req.body.distance
         };
 
         const datatrade = new tradeData(itemtrade);

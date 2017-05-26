@@ -1,3 +1,5 @@
+/*
+
 var assert = require('assert');
 var tradeinfo = require('../public/javascripts/DynamicForm.js');
 var tradeList, serviceList;
@@ -20,11 +22,11 @@ describe('Trades and services test', function() {
 
   //run tests
   it('test simple', function() {
-    assert.equal(1+1, 2, 'ts test');
+    assert.equal(,, 'ts test');
   });
 
   afterEach(function() {
 
   });
 
-});
+}); */
