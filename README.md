@@ -6,7 +6,7 @@ To launch this project:
 
 Running on the local machine (assuming that nodejs and npm are installed):
 
-1. Clone the Github repository.
+1. Clone the Github repository. https://github.com/matteodibiscotti/TaS2
 2. Navigate to the root directory for the project.
 3. Run the command 'npm install' which will install the required dependencies for this application
 4. Run the command 'npm start &' to start the
